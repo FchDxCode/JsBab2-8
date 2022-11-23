@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.5 fch</title>
+    <script type="text/javascript">
+        function Buku(judul, penulis, penerbit) { // Menerima 3 parameter
+        this.nomorhal = 0; //Properti Properti
+        this.judul = judul;
+        this.penulis = penulis;
+        this.penerbit = penerbit;
+        this.maju = majuHal; // Menciptakan metode metode
+        this.mundur = mundurHal; 
+        }
+        function majuHal() { // Fungsi fungsi yang dipakai sebagai metode
+        this.nomorhal++;
+        return this.nomorhal;
+        }
+        function mundurHal() {
+            this.nomorhal--;
+            return this.nomorhal;
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        var bukuKu = new Buku("pemrograman javascript", "Rh.Sianipar", "Penerbit hebat" ); // Menciptakan Object Baru
+        bukuKu.nomorhal= 5; // Menugaskan nomor halaman
+        document.write( "<br>"+ bukuKu.judul +
+        "<br>" + bukuKu.penulis +
+        "<br>" + bukuKu.penerbit +
+        "<br>Halaman Sekarang: " + bukuKu.nomorhal);
+        document.write( "<b>Halaman Dimajukan: " );
+            for (i=0;i<3;i++) {
+                document.write("<br />"+ bukuKu.maju());
+                // Memajukan sebuah halaman
+            }
+            document.write( "<br />Halaman di mundurkan: ");
+            for (;i>0; i--) {
+                document.write("<br />" + bukuKu.mundur());
+                // Memundurkan sebuah halaman
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan bab7 no 4 Kelompok 5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Belum Responsive Tolong Buka Pakai Laptop-->
+</head>
+<body>
+    <script type="text/javascript">
+        alert("Belum Responsive Tolong Buka Pakai Laptop!")
+        class Konsumen {
+            nama = " ";
+            gender = " ";
+            foto = " ";
+            pekerjaan = " ";
+            constructor(nama, gender, foto, pekerjaan) {
+                this.nama = nama;
+                this.gender = gender;
+                this.foto = foto;
+                this.pekerjaan = pekerjaan;
+            }
+            tampilKonsumen() {
+                return `${this.nama} <br> ${this.gender} <br> ${this.foto} <br> ${this.pekerjaan}`;
+            }
+        }
+        var namaUser = prompt("Siapa nama anda? ");
+        var genderUser = prompt("Masukan Usia anda? ");
+        var fotoUser = prompt("masukan foto anda...");
+        var pekerjaanUser = prompt("Apa pekerjaan anda? ");
+        var konsumenBaru = new Konsumen(namaUser, genderUser, fotoUser, pekerjaanUser);
+
+        document.write(konsumenBaru.tampilKonsumen());
+    </script>
+</body>
+</html>

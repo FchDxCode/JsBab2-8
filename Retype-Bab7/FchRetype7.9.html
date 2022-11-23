@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        function buku(judul, pengarang, penerbit) {
+            this.judul = judul; // Properti properti
+            this.pengarang = pengarang;
+            this.penerbit = penerbit;
+            this.tampil = tampil; // Mendefinisikan sebuah metoded
+        }
+        function tampil() { // Kata kunci with dengan this
+            with(this) {
+                var info = "Judul: " + judul;
+                info += "\nPengarang: " + pengarang;
+                info += "\nPenerbit: " + penerbit;
+                alert(info);
+            }
+        }
+    </script>
+</head>
+<body bgcolor="LightBlue">
+    <script type="text/javascript">
+        var bukuAnak = new buku("A childs Garden of Verse",
+            "Yogiri Takatou",
+            "Martial Peak");
+        var bukuDewasa = new buku("War And Peace",
+            "Lelouch Lamperouge",
+            "Code Geas");
+
+        bukuAnak.tampil(); // Memanggil metode buku anak
+        bukuDewasa.tampil(); // Memanggil metode buku dewasa
+    </script>
+</body>
+</html>

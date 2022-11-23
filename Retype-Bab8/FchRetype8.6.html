@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retype bab 8 fch</title>
+</head>
+<body bgcolor="DarkGrey">
+    <h2>Sebuah array dengan index String</h2>
+    <script type="text/javascript">
+        var propinsi = new Array();
+            propinsi["SUMUT"] = "Sumatera Utara";
+            propinsi["SUMBAR"] = "Sumatera Barat";
+            propinsi["SUMSEL"] = "Sumatera Selatan";
+        for(var i in propinsi) {
+            document.write("indeks:<em> "+ i);
+            document.write(".</em> Nilai: <em>"+ propinsi[i]
+                + ".</em><br />");
+        }
+    </script>
+</body>
+</html>

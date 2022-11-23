@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Retype bab 8 fch</title>
+</head>
+<body bgcolor="DarkGrey">
+    <table border="2" bordercolor="blue">
+      <caption>Tabel Nilai</caption>
+      <tr>
+      <script type="text/javascript">
+        var arrayNilai= [ [77,88,99,75],
+                      [50,60,99,89],
+                      [99,88,78,92],
+        ];
+          // alert(grades.length); Menampilkan 3
+          // alert(grades); Menampilkan 77,88,99,75,50,60,99,89,
+          //99,88,78,92
+        for (var i=0; i < arrayNilai.length; i++) {
+          for (var j=0; j < arrayNilai[i].length; j++) {
+            document.write(
+               "<td bgcolor='#fff00'>"+arrayNilai[i] [j] + "</td>");            
+          }
+          document.write("</tr>");
+        }
+      </script>
+    </table>
+  </body>
+</html>

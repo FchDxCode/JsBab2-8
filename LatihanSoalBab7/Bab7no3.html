@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan bab7 no 3 Kelompok 5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <p class="absolute mx-auto my auto top-0 bottom-0 right-0 left-[10%] h-max w-max text-rose-400 font-bold mb-8 text-4xl">KARYAWAN KERJA</p>
+    <script type="text/javascript">
+        alert("Belum Responsive Tolong Buka Pakai Laptop!");
+        function karyawan(nama, telepon) {
+            this.nama = nama;
+            this.telepon = telepon;
+            this.getName = () => {
+                return this.nama;
+            }
+            this.getTelepon = () => {
+                return this.telepon;
+            }
+        }
+        var karyawan_1 = new karyawan("Name : John Netscape", "No Tlpn : +102832523");
+        var karyawan_2 = new karyawan("Name : Diago Mark.N", "No Tlpn : +62897882431");
+        var karyawan_3 = new karyawan("Name : Nork Marcel", "No Tlpn : +2873516382");
+
+        document.write("<div class='absolute mx-auto my auto top-[10%] bottom-0 right-0 left-[10%] h-max w-max bg-lime-500 w-[20%] mb-3 p-5 rounded-md text-white space-y-1'> <h3 class='text-black font-semibold text-xl'>", karyawan_1.getName(),"</h3>" ,karyawan_1.getTelepon(), "<br></div>");
+            document.write("<div class='absolute mx-auto my auto top-[30%] bottom-0 right-0 left-[10%] h-max w-max bg-emerald-500 w-[20%] mb-3 p-5 rounded-md space-y-1 text-white'> <h3 class='text-black font-semibold text-xl'>", karyawan_2.getName(),"</h3>" ,karyawan_2.getTelepon(), "<br></div>");
+                document.write("<div class='absolute mx-auto my auto top-[50%] bottom-0 right-0 left-[10%] h-max w-max bg-violet-500 w-[20%] mb-3 p-5 rounded-md text-white space-y-1'> <h3 class='text-black font-semibold text-xl'>", karyawan_3.getName(),"</h3>" ,karyawan_3.getTelepon(), "<br></div>");
+    </script>
+</body>
+</html>

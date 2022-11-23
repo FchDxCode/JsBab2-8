@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Closure</title>
+            <script type="text/javascript">
+                function lukis(tipe, warna) {
+                    var str ="Bunga" + tipe + " Berwarna " + warna; //variabel lokal
+                    var beritahu = function()  { // Fungsi anonim
+                        document.write("<big>"+str+".</big><br />")
+                    }
+                    return beritahu; // menghasilkan sebuah referensi terhadap fungsi 
+                }
+            </script>
+    </head>
+    <body bgcolor="lightgreen">
+        <h2>Menguji sebuah Closure</h2>
+        <script type="text/javascript">
+            var katakan1 = lukis("mawar","merah") ;
+            var katakan2 = lukis("matahari", "kuning") ;
+            alert(katakan1) ; // Melihat nilai pada katakan1
+            katakan1 () ; // Memanggil fungsi anonim
+            katakan2 () ; 
+        </script>
+    </body>
+</html>

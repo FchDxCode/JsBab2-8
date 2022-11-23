@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retype bab 8 fch</title>
+</head>
+    <body bgcolor="cyan"> 
+        <h2>Tanggal dan Waktu </h2>
+        <big>
+            <script type="text/javascript">
+                var skrg = new Date(); // skrg adalah instans dari objek Date
+                    document.write("<b>Waktu lokal:</b> " + skrg + "<br />");
+                var jam=skrg.getHours();
+                var menit=skrg.getMinutes();
+                var detik=skrg.getSeconds();
+                var tahun=skrg.getFullYear();
+                    document.write("Tahun (format penuh) " + tahun +"<br />");
+                    document.write("<b>Waktu:</b> " +
+                        jam + ":" + menit + ":" + detik);
+            </script>
+        </big>
+    </body>
+</html>

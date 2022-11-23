@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retype bab 8 fch</title>
+    <script type="text/javascript">
+
+            // Memodifikasi Objek Date
+            function hariSeminggu(){
+                var skrng = this.getDay();
+                var nama = new Array(7);
+                    nama[0]="Minggu";
+                    nama[1]="Senin";
+                    nama[2]="Selasa";
+                    nama[3]="Rabu";
+                    nama[4]="Kamis";
+                    nama[5]="Jumat";
+                    nama[6]="Sabtu";
+                return(nama[skrng]);
+            }
+            Date.prototype.DayOfWeek=hariSeminggu
+
+    </script>
+</head>
+    <body bgcolor="DarkGrey">
+        <font face="arial">
+            <big>
+                <div align="center">
+                    <script type="text/javascript">
+                        var hariIni=new Date();
+                            document.write("Hari ini" + hariIni.DayOfWeek() + ".<br />")
+                    </script>
+                </div>
+            </big>
+        </font>
+    </body>
+</html>

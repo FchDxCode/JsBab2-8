@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Latihan bab7 no 2 Kelompok 5</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!--Belum Responsive Tolong Buka Pakai Laptop-->
+  <center>
+  <script type="text/javascript">
+    alert("Belum Responsive Tolong Buka Pakai Laptop!")
+    const FORMATS = {
+      DuaBelasJam: 12,
+      DuaPuluhEmpatJam: 24
+    }
+    class Clock {
+      format = FORMATS.DuaPuluhEmpatJam;
+
+      constructor(clockDivId) {
+        this.clockDivId = clockDivId;
+
+        this.clockInterval = setInterval(() => {
+          document.getElementById(clockDivId).innerHTML = this.getCurrentTime().format(this.format);
+        }, 500)
+      }
+      getCurrentTime() {
+        let today = new Date();
+        return new Time(today.getHours(), today.getMinutes(), today.getSeconds());
+      }
+      switchTo12HourFormat() {
+        this.format = FORMATS.DuaBelasJam
+      }
+      switchTo24HourFormat() {
+        this.format = FORMATS.DuaPuluhEmpatJam
+      }
+      destroy() {
+        clearInterval(this.clockInterval);
+      }
+    }
+    class Time {
+      constructor(hours, minutes, seconds) {
+        this.hours = hours;
+        this.minutes = minutes;
+        this.seconds = seconds;
+      }
+
+      format(type) {
+        switch (type) {
+          case FORMATS.DuaPuluhEmpatJam: {
+            return this.print(this.hours)
+          }
+          case FORMATS.DuaBelasJam: {
+            let tag = this.hours >= 12 ? '' : '';
+            let hours = this.hours % 12;
+            if (hours == 0) {
+              hours = 12;
+            }
+            return this.print(hours) + ' ' + tag;
+          }
+        }
+      }
+      to2Digits(number) {
+        return number < 10 ? '0' + number : '' + number;
+      }
+      print(hours) {
+        return this.to2Digits(hours) + ':' + this.to2Digits(this.minutes) + ':' + this.to2Digits(this.seconds);
+      }
+    }
+    let clock = new Clock("clock");
+  </script>
+  </center>
+</head>
+
+<body>
+  <h1 class="absolute mx-auto text-5xl top-[40%] bottom-0 right-0 left-0 h-max w-max" id="clock"></h1>
+  <div id="clock"></div>
+  <br />
+  <button class="absolute mx-auto my auto top-[50%] bottom-0 right-[10%] left-0 h-max w-max rounded-xl bg-lime-300 p-3 font-light hover:bg-green-300 ease-linear duration-10" onclick="clock.switchTo12HourFormat()">Format 12 Jam</button>
+  <button class="absolute mx-auto my auto top-[50%] bottom-0 right-0 left-[10%] h-max w-max rounded-xl bg-cyan-300 p-3 font-light hover:bg-blue-300 ease-linear duration-10" onclick="clock.switchTo24HourFormat();">Format 24 Jam</button>
+</body>
+</html>

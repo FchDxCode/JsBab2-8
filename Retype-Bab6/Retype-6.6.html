@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nilai Balik</title>
+            <script type="text/javascript">
+                function kuantitas(km, bensin) {
+                    return km/bensin; // Nilai balik berupa hasil pembagian
+                }
+            </script>
+    </head>
+    <body bgcolor="white">
+        <font face="arial" size="+1">
+            <div align="center">
+                <img src="https://cdn.motor1.com/images/mgl/kNREB/s3/lamborghini-huracan-sto.webp" width="500" height="300" border="1"> 
+                <script type="text/javascript">
+                    var jarak=eval(prompt("Berapa km yang telah Anda lalui?", ""));
+                    var banyak=eval(prompt("Berpa liter bensin yang Anda habiskan?", ""));
+                    var laju = kuantitas(jarak, banyak);
+                    // Nilai balik ditugaskan kepada laju
+                    alert("Kuantitas: "+ laju +" km per liter.\n");
+                </script>
+            </div>
+        </font>
+    </body>
+</html>

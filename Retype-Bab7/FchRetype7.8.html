@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.8 fch</title>
+    <script type="text/javascript">
+        var mobil = { // Menciptakan sebuah objek mobil
+            pembuat: undefined,
+            tahun: 2022,
+            harga: undefined,
+            gambar: "MobilLucif.jpg",
+            
+        pemilik: {
+            nama: "Lucifer morningstar",
+            no_sel: "999-999-9999",
+            alamat: {jalan: "DC Komik",
+            kota: "DC Vertigo",
+            provinsi: "Amerika Serikat"
+        }
+        },
+        dealer: "Malcolm Wheeler",
+        tampil: function() {detil="Pembuat: "+ mobil.pembuat+"\n";
+            detil += "Tahun: "+mobil.tahun+"\n";
+            detil += "Harga Rp : "+mobil.harga+"\n";
+            detil += "Pemilik: "+
+            mobil.pemilik.nama+"\n";
+            alert(detil);
+        }
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        mobil.pembuat="Malcolm Wheeler"; // Menugaskan Nilai
+        mobil.tahun=2050; // Memperbarui Tahun
+        mobil.harga=9000000;
+        mobil.tampil();
+
+        document.write("<img src='"+mobil.gambar+"'>");
+    </script>
+</body>
+</html>

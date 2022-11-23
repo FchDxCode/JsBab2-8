@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Skop Fungsi</title>
+            <script type="text/javascript">
+                var nama="Kusumawardani"; // Variabel global 
+                var kota="Mataram";
+                function identitas() {
+                    var nama="Kristof"; // Variabel lokal
+                    var kota="Siantar";
+                    alert("Di dalam fungsi, nama menjadi " + nama +
+                        " dan kota majadi "+ kota);
+                }
+            </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+            identitas(); // Pemanggil fungsi
+            alert("Di luar fungsi, nama menjadi "+ nama +
+                " dan kota menjadi " + kota);
+        </script>
+    </body>
+</html>

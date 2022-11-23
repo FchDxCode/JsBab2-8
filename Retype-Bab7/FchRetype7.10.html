@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.10 fch</title>
+    <script type="text/javascript">
+        function buku(judul, pengarang, penerbit) {
+            this.judul = judul;
+            this.pengarang = pengarang;
+            this.penerbit = penerbit;
+            this.tampil = tampil; // Mendefinisikan sebuah metode
+        }
+        function tampil(obj, nama) {
+            // Fungsi untuk menampilkan properti objek
+            var hasil = " ";
+        for (var prop in obj) {
+            hasil += nama + "." +prop+ " = " +
+            obj[prop] + "<br />";
+        }
+        return hasil;
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        bukuKu = new buku("Pemrograman Java Script", "Yogiri Takatou", 
+        "penerbit Hebatt!!");
+    document.write("<br /><b>"+ bukuKu.tampil(bukuKu, "bukuKu"));
+    </script>
+</body>
+</html>

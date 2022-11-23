@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Properti Objek</title>
+    <script type="text/javascript">
+        function Buku (judul, pengarang) {
+            this.judul = judul;
+            this.pengarang = pengarang;
+        }
+    </script>
+</head>
+<body bgcolor="#EOFFFF">
+    <big>
+    <script>
+        var buku1 = new Buku ("Kidnapped", "R.L.Stevenson");
+        var buku2 = new Buku ("Tale of Two Cities", "Charles Dickens");
+        Buku.prototype.penerbit = "Penguin Books";
+        document.write(buku1.judul + " diterbitkan oleh " + buku1.penerbit + "<br/>");
+        document.write(buku2.judul + " diterbitkan oleh " + buku2.penerbit);
+    </script>
+    </big>
+</body>
+</html>

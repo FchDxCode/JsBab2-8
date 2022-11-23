@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan bab7 no 5 Kelompok 5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!--Belum Responsive Tolong Buka Pakai Laptop-->
+</head>
+<body>
+    <p class="absolute mx-auto my auto top-0 bottom-0 right-0 left-[10%] h-max w-max text-rose-400 font-bold mb-8 text-4xl">KARYAWAN</p>
+    <script type="text/javascript">
+        alert("Belum Responsive Tolong Buka Pakai Laptop!")
+        function Karyawan(nama, telepon) {
+            this.nama = nama;
+            this.telepon = telepon;
+            this.gaji = "";
+            this.setKenaikanGaji = () => {
+                this.gaji = this.gaji * (115/100)
+            }
+            this.setGaji = (gaji) => {
+                this.gaji = "RP. "+ gaji;
+            }
+            this.getGaji = () => {
+                return this.gaji;
+            }
+            this.getNama = () => {
+                return this.nama;
+            }
+            this.getTelepon = () => {
+                return this.telepon;
+            }
+        }
+        function Bawahan(nama, telepon) {
+            Karyawan.call(this, nama, telepon);
+        }
+        function Manager(nama, telepon) {
+            Karyawan.call(this, nama, telepon);
+        }
+
+        var bawahan_1 = new Bawahan("Nama: Bumi.D", "No Tlpn: +082353522");
+        var bawahan_2 = new Bawahan("Nama: Akbar T.R", "No Tlpn: +624235373");
+        var bawahan_3 = new Bawahan("Nama: Fahrizal .A", "No Tlpn: +6243236342");
+
+        bawahan_1.setGaji(4500000);
+        bawahan_2.setGaji(3500000);
+        bawahan_3.setGaji(3000000);
+
+        document.write("<div class='absolute mx-auto my auto top-[10%] bottom-0 right-0 left-[10%] h-max w-max bg-lime-500 w-[20%] mb-3 p-5 rounded-md text-white space-y-1'> <h3 class='text-black font-semibold text-xl'>", bawahan_1.getNama(), "</h3>", bawahan_1.getTelepon(), "<br>", bawahan_1.getGaji(), "</div><br>")
+        document.write("<div class='absolute mx-auto my auto top-[30%] bottom-0 right-0 left-[10%] h-max w-max bg-emerald-500 w-[20%] mb-3 p-5 rounded-md text-white space-y-1'> <h3 class='text-black font-semibold text-xl'>", bawahan_2.getNama(), "</h3>", bawahan_2.getTelepon(), "<br>", bawahan_2.getGaji(), "</div><br>")
+        document.write("<div class='absolute mx-auto my auto top-[50%] bottom-0 right-0 left-[10%] h-max w-max bg-violet-500 w-[20%] mb-3 p-5 rounded-md text-white space-y-1'> <h3 class='text-black font-semibold text-xl'>", bawahan_3.getNama(), "</h3>", bawahan_3.getTelepon(), "<br>", bawahan_3.getGaji(), "</div><br>")
+    </script>
+</body>
+</html>

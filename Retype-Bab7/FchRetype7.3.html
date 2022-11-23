@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7.3 fch</title>
+    <script type="text/javascript">
+        var mainan = new Object(); // Menciptakan object
+        mainan.nama = "Lego";
+        mainan.warna = "merah";
+        mainan.bentuk = "persegi-panjang";
+        mainan.tampil=tampilObject; // Nama fungsi ditugaskan sebagai
+                                    // Sebuah Properti Dari Object
+
+        function tampilObject() {
+            document.write("<b> Mainan Bernama " + mainan.nama + ".<br>");
+                document.write("Dengan warna " + mainan.warna+"" + mainan.bentuk+ ".<br />");
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        mainan.tampil(); // Metode objek di panggil
+        mainan.warna="biru";
+        mainan.tampil();
+    </script>
+</body>
+</html>
